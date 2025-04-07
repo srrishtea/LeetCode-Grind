@@ -6,13 +6,13 @@ public:
         unordered_map<int,int>mp;
         mp[0]=1;
 
-        for(int i=0;i<n;i++) {
+        while(i<n) {
             ps+=nums[i];
             if(mp.find(ps-k) != mp.end()) {
                 cnt+=mp[ps-k];
             }
             mp[ps]++;
-            //i++;
+            i++;
         
         }
 
